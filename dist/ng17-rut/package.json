@@ -1,13 +1,13 @@
 {
-  "name": "@presercomp/ng17-rut",
+  "name": "ng17-rut",
   "version": "1.0.0",
   "main": "./bundles/ng17-rut.umd.js",
-  "module": "fesm2022/presercomp-ng17-rut.mjs",
+  "module": "fesm2022/ng17-rut.mjs",
   "es2015": "./fesm2015/ng17-rut.js",
   "typings": "index.d.ts",
   "peerDependencies": {
-    "@angular/common": "^16.0.0",
-    "@angular/core": "^16.0.0"
+    "@angular/common": "^17.3.12",
+    "@angular/core": "^17.3.12"
   },
   "dependencies": {
     "tslib": "^2.3.0"
@@ -19,9 +19,9 @@
     },
     ".": {
       "types": "./index.d.ts",
-      "esm2022": "./esm2022/presercomp-ng17-rut.mjs",
-      "esm": "./esm2022/presercomp-ng17-rut.mjs",
-      "default": "./fesm2022/presercomp-ng17-rut.mjs"
+      "esm2022": "./esm2022/ng17-rut.mjs",
+      "esm": "./esm2022/ng17-rut.mjs",
+      "default": "./fesm2022/ng17-rut.mjs"
     }
   }
 }
