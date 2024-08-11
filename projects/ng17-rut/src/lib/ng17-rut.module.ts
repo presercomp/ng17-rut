@@ -1,16 +1,34 @@
 import { NgModule } from '@angular/core';
-import { Ng17RutComponent } from './ng17-rut.component';
+import { FormsModule } from '@angular/forms';
+
+import { RutPipe } from './rut.pipe';
+import { RutValidator } from './rut.validator';
+import { RutDirective } from './rut.directive';
+import { RutValueAccessor } from './rut-value-accessor';
 
 
+export { RutPipe } from './rut.pipe';
+export { RutValidator } from './rut.validator';
+export { RutDirective } from './rut.directive';
 
 @NgModule({
-  declarations: [
-    Ng17RutComponent
-  ],
   imports: [
+    FormsModule,
+  ],
+  declarations: [
+    RutPipe,
+    RutDirective,
+    RutValidator,
+    RutValueAccessor
+  ],
+  providers: [
+    RutValidator,
   ],
   exports: [
-    Ng17RutComponent
-  ]
+    RutPipe,
+    RutDirective,
+    RutValidator,
+    RutValueAccessor,
+  ],
 })
 export class Ng17RutModule { }

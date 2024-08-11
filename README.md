@@ -1,27 +1,97 @@
-# Ng17Rut
+Angular 17 RUT
+=============
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Libería Angular 17 con varios componentes para manejar la validación, limpieza y formato del [RUT Chileno](https://en.wikipedia.org/wiki/National_identification_number#Chile).
 
-## Development server
+## Instalación
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```bash
+yarn add ng17-rut
+# or
+npm install ng17-rut --save
+```
 
-## Code scaffolding
+## Uso
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Configuración:
 
-## Build
+La manera más fácil de usar esta libería es importar Ng17Rut en el módulo principal de tu aplicación:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```typescript
+import { NgModule } from '@angular/core';
+import { Ng17Rut } from 'ng17-rut';
+import { BrowserModule } from '@angular/platform-browser';
 
-## Running unit tests
+@NgModule({
+  ...
+  imports: [
+    BrowserModule,
+    Ng17Rut
+  ],
+})
+class DemoAppModule { }
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+See `./demo` folder for a fully working example.
 
-## Running end-to-end tests
+### Usándolo:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+ng17-rut expone múltiples caracterísiticas que pueden ser utilizadas para realizar validación y formateo de entradas. Probablemente quieras usar una de las siguientes
 
-## Further help
+- `RutValidator`: Expone la directiva `validateRut` (para adjuntar a modelos o entradas) y la directiva RutValidator para ser usasda como `Validator` en formularios reactivos.
+- `RutPipe`: Expone el pipe `RutPipe` para formatear números de rut en plantillas
+- `RutDirective`: Expone la directiva `formatRut` para formatear entradas de RUT
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### RutValidator
+
+##### Formularios reactivos
+
+```typescript
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+export class DemoAppComponent {
+  constructor (fb: FormBuilder, rutValidator: RutValidator) {
+    this.reactiveForm = fb.group({
+      rut: ['30972198', [Validators.required, rutValidator]]
+    });
+  }
+}
+
+```
+
+##### Formularios de plantilla
+```html
+<input [(ngModel)]="user.rut" name="rut" validateRut required>
+```
+
+#### RutPipe
+
+```html
+{{ user.rut }}
+<!-- 30972198 -->
+{{ user.rut | rut }}
+<!-- 3.097.219-8 -->
+```
+
+#### formatRut (Directiva)
+```html
+<input [(ngModel)]="user.rut" name="rut" formatRut required>
+<!--
+(on blur)
+3.097.219-8
+
+(on focus)
+30972198
+-->
+```
+
+## Credits
+
+Fork original de ng16-rut de [odisleysi](https://github.com/odisleysi/ng16-rut);
+a su vez, Fork de [platanous](https://github.com/platanus/ng2-rut)
+
+ng17-rut is maintained by [presercomp](https://github.com/presercomp).
+
+## License
+
+Angular 17 RUT is © 2024 PREESCOMP. Es un software libre y puede ser redistribuido bajo los términos especificados en el archivo de LICENCIA.
+
