@@ -3,5 +3,41 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ng17-rut": {
+      "projectType": "library",
+      "root": "projects/ng17-rut",
+      "sourceRoot": "projects/ng17-rut/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng17-rut/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng17-rut/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng17-rut/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/ng17-rut/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
   }
 }
