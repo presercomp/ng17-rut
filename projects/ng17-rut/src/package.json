@@ -1,0 +1,12 @@
+{
+  "name": "ng17-rut",
+  "version": "1.0.0",
+  "main": "fesm2022/ng17-rut.mjs",
+  "module": "fesm2022/ng17-rut.mjs",
+  "typings": "index.d.ts",
+  "type": "module",
+  "peerDependencies": {
+    "@angular/common": "^17.0.0",
+    "@angular/core": "^17.0.0"
+  }
+}
