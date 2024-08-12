@@ -1,12 +1,16 @@
 {
   "name": "ng17-rut",
   "version": "1.0.0",
-  "main": "fesm2022/ng17-rut.mjs",
-  "module": "fesm2022/ng17-rut.mjs",
-  "typings": "index.d.ts",
-  "type": "module",
+  "main": "esm2022/ng17-rut.mjs",
+  "module": "esm2022/ng17-rut.mjs",
+  "typings": "lib/index.d.ts",
   "peerDependencies": {
-    "@angular/common": "^17.0.0",
-    "@angular/core": "^17.0.0"
-  }
+    "@angular/common": "^17.3.12",
+    "@angular/core": "^17.3.12"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
 }
+

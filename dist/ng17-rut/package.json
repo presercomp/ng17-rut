@@ -1,10 +1,9 @@
 {
   "name": "ng17-rut",
   "version": "1.0.0",
-  "main": "./bundles/ng17-rut.umd.js",
-  "module": "fesm2022/ng17-rut.mjs",
-  "es2015": "./fesm2015/ng17-rut.js",
-  "typings": "index.d.ts",
+  "main": "esm2022/ng17-rut.mjs",
+  "module": "esm2022/ng17-rut.mjs",
+  "typings": "lib/index.d.ts",
   "peerDependencies": {
     "@angular/common": "^17.3.12",
     "@angular/core": "^17.3.12"
@@ -12,16 +11,5 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false,
-  "exports": {
-    "./package.json": {
-      "default": "./package.json"
-    },
-    ".": {
-      "types": "./index.d.ts",
-      "esm2022": "./esm2022/ng17-rut.mjs",
-      "esm": "./esm2022/ng17-rut.mjs",
-      "default": "./fesm2022/ng17-rut.mjs"
-    }
-  }
+  "sideEffects": false
 }

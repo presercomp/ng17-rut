@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build ng17-rut && npm run copy-pkg",
+    "copy-pkg" : "cp projects/ng17-rut/package.json dist/ng17-rut/package.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
