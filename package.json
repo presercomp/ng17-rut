@@ -1,0 +1,16 @@
+{
+  "name": "ng17-rut",
+  "version": "1.0.0",
+  "main": "./bundles/ng17-rut.umd.js",
+  "module": "./fesm5/ng17-rut.js",
+  "es2015": "./fesm2015/ng17-rut.js",
+  "typings": "./ng17-rut.d.ts",
+  "peerDependencies": {
+    "@angular/common": "^17.3.12",
+    "@angular/core": "^17.3.12"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
