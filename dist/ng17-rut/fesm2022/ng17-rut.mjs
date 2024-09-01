@@ -45,10 +45,10 @@ class RutPipe {
     transform(value) {
         return rutFormat(value);
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: RutPipe, deps: [], target: i0.ɵɵFactoryTarget.Pipe }); }
-    static { this.ɵpipe = i0.ɵɵngDeclarePipe({ minVersion: "14.0.0", version: "17.3.12", ngImport: i0, type: RutPipe, name: "rut" }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: RutPipe, deps: [], target: i0.ɵɵFactoryTarget.Pipe }); }
+    static { this.ɵpipe = i0.ɵɵngDeclarePipe({ minVersion: "14.0.0", version: "18.0.1", ngImport: i0, type: RutPipe, name: "rut" }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: RutPipe, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: RutPipe, decorators: [{
             type: Pipe,
             args: [{
                     name: 'rut',
@@ -75,10 +75,10 @@ class RutDirective {
     onKeyDown(event) {
         return this.allowedKeys.includes(event.key);
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: RutDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive }); }
-    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "17.3.12", type: RutDirective, selector: "[formatRut]", outputs: { rutChange: "rutChange" }, host: { listeners: { "blur": "onBlur($event)", "focus": "onFocus($event)", "input": "onChange($event)", "keydown": "onKeyDown($event)" } }, ngImport: i0 }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: RutDirective, deps: [], target: i0.ɵɵFactoryTarget.Directive }); }
+    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "18.0.1", type: RutDirective, selector: "[formatRut]", outputs: { rutChange: "rutChange" }, host: { listeners: { "blur": "onBlur($event)", "focus": "onFocus($event)", "input": "onChange($event)", "keydown": "onKeyDown($event)" } }, ngImport: i0 }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: RutDirective, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: RutDirective, decorators: [{
             type: Directive,
             args: [{
                     selector: '[formatRut]',
@@ -107,12 +107,12 @@ class RutValidator {
     validate(c) {
         return this.validator(c);
     }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: RutValidator, deps: [], target: i0.ɵɵFactoryTarget.Directive }); }
-    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "17.3.12", type: RutValidator, selector: "[validateRut][ngModel],[validateRut][formControl]", providers: [
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: RutValidator, deps: [], target: i0.ɵɵFactoryTarget.Directive }); }
+    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "18.0.1", type: RutValidator, selector: "[validateRut][ngModel],[validateRut][formControl]", providers: [
             { provide: NG_VALIDATORS, useExisting: forwardRef(() => RutValidator), multi: true },
         ], ngImport: i0 }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: RutValidator, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: RutValidator, decorators: [{
             type: Directive,
             args: [{
                     selector: '[validateRut][ngModel],[validateRut][formControl]',
@@ -140,10 +140,10 @@ class RutValueAccessor {
     }
     registerOnChange(fn) { this.onChange = fn; }
     registerOnTouched(fn) { this.onTouched = fn; }
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: RutValueAccessor, deps: [{ token: i0.Renderer2 }, { token: i0.ElementRef }], target: i0.ɵɵFactoryTarget.Directive }); }
-    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "17.3.12", type: RutValueAccessor, selector: "input[formatRut]", host: { listeners: { "rutChange": "onChange($event)", "blur": "onTouched($event)" } }, providers: [RUT_VALUE_ACCESSOR], ngImport: i0 }); }
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: RutValueAccessor, deps: [{ token: i0.Renderer2 }, { token: i0.ElementRef }], target: i0.ɵɵFactoryTarget.Directive }); }
+    static { this.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "18.0.1", type: RutValueAccessor, selector: "input[formatRut]", host: { listeners: { "rutChange": "onChange($event)", "blur": "onTouched($event)" } }, providers: [RUT_VALUE_ACCESSOR], ngImport: i0 }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: RutValueAccessor, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: RutValueAccessor, decorators: [{
             type: Directive,
             args: [{
                     selector: 'input[formatRut]',
@@ -156,19 +156,19 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImpo
         }], ctorParameters: () => [{ type: i0.Renderer2 }, { type: i0.ElementRef }] });
 
 class Ng17RutModule {
-    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: Ng17RutModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
-    static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "17.3.12", ngImport: i0, type: Ng17RutModule, declarations: [RutPipe,
+    static { this.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: Ng17RutModule, deps: [], target: i0.ɵɵFactoryTarget.NgModule }); }
+    static { this.ɵmod = i0.ɵɵngDeclareNgModule({ minVersion: "14.0.0", version: "18.0.1", ngImport: i0, type: Ng17RutModule, declarations: [RutPipe,
             RutDirective,
             RutValidator,
             RutValueAccessor], imports: [FormsModule], exports: [RutPipe,
             RutDirective,
             RutValidator,
             RutValueAccessor] }); }
-    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: Ng17RutModule, providers: [
+    static { this.ɵinj = i0.ɵɵngDeclareInjector({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: Ng17RutModule, providers: [
             RutValidator,
         ], imports: [FormsModule] }); }
 }
-i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "17.3.12", ngImport: i0, type: Ng17RutModule, decorators: [{
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "18.0.1", ngImport: i0, type: Ng17RutModule, decorators: [{
             type: NgModule,
             args: [{
                     imports: [
