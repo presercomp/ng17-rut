@@ -87,11 +87,11 @@ export class DemoAppComponent {
 ## Credits
 
 Fork original de ng16-rut de [odisleysi](https://github.com/odisleysi/ng16-rut);
-a su vez, Fork de [platanous](https://github.com/platanus/ng2-rut)
+a su vez, Fork de [platanus](https://github.com/platanus/ng2-rut)
 
 ng17-rut is maintained by [presercomp](https://github.com/presercomp).
 
 ## License
 
-Angular 17 RUT is © 2024 PREESCOMP. Es un software libre y puede ser redistribuido bajo los términos especificados en el archivo de LICENCIA.
+Angular 17 RUT is © 2024 PRESERCOMP. Es un software libre y puede ser redistribuido bajo los términos especificados en el archivo de LICENCIA.
 
